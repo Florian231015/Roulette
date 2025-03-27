@@ -135,7 +135,7 @@ body {
   transform: scale(1.05); /* Vergrößert den Button bei Hover */
 }
 
-/* Tisch: 5x14 Grid */
+/* Tisch: 5x13 Grid (2 to 1 Spalte entfernt) */
 .table-container {
   max-width: 1100px; /* Maximale Breite des Tisches */
   flex: 2; /* Nimmt mehr Platz ein als das Rad */
@@ -146,7 +146,7 @@ body {
 .roulette-grid {
   display: grid; /* Grid-Layout für den Tisch */
   grid-template-rows: repeat(5, 80px); /* 5 Reihen, je 80px hoch */
-  grid-template-columns: 60px repeat(12, 80px) 40px; /* Spalten: 60px (0), 12x80px (Zahlen), 40px (2 to 1) */
+  grid-template-columns: 60px repeat(12, 80px); /* Spalten: 60px (0), 12x80px (Zahlen) */
   gap: 2px; /* Abstand zwischen Zellen */
   margin: 0 auto; /* Zentriert das Grid */
   position: relative; /* Ermöglicht absolute Positionierung von Kind-Elementen */
@@ -200,18 +200,35 @@ body {
   font-size: 20px; /* Kleinere Schriftgröße */
 }
 
-/* Spezifische Klasse für "2 to 1"-Felder */
+/* "2 to 1"-Felder */
 .to-2-1 {
+  position: absolute; /* Absolute Positionierung */
   background: url('img/acrylic-texture-dark-green.jpg') repeat; /* Dunklere Textur (Platzhalter) */
   background-color: #1a5c38; /* Dunkleres Grün */
-  writing-mode: vertical-rl; /* Text vertikal ausrichten */
-  text-orientation: mixed; /* Textorientierung für vertikalen Text */
-  padding: 5px; /* Innenabstand */
-  height: 100%; /* Volle Höhe der Zelle */
-  width: 100%; /* Volle Breite der Zelle */
-  display: flex; /* Flexbox für Zentrierung */
-  align-items: center; /* Vertikale Zentrierung */
-  justify-content: center; /* Horizontale Zentrierung */
+  color: #fff; /* Textfarbe weiß */
+  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
+  font-size: 14px; /* Kleinere Schriftgröße */
+  padding: 2px 5px; /* Innenabstand */
+  border: 1px solid #fff; /* Weißer Rand */
+  border-radius: 5px; /* Abgerundete Ecken */
+  cursor: pointer; /* Zeiger-Cursor bei Hover */
+  z-index: 2; /* Über den Zellen */
+}
+
+/* Positionierung der "2 to 1"-Felder über den Zellen 36, 35, 34 */
+.to-2-1[data-type="2to1-row1"] {
+  top: 2px; /* Abstand vom oberen Rand der Zelle (Reihe 1) */
+  right: 2px; /* Abstand vom rechten Rand der Zelle */
+}
+
+.to-2-1[data-type="2to1-row2"] {
+  top: 82px; /* Abstand vom oberen Rand des Grids (Reihe 2: 80px + 2px gap) */
+  right: 2px; /* Abstand vom rechten Rand der Zelle */
+}
+
+.to-2-1[data-type="2to1-row3"] {
+  top: 162px; /* Abstand vom oberen Rand des Grids (Reihe 3: 160px + 2px gap) */
+  right: 2px; /* Abstand vom rechten Rand der Zelle */
 }
 
 /* Markierung bei aktiven Wetten */
@@ -358,7 +375,7 @@ body {
 
   .roulette-grid {
     grid-template-rows: repeat(5, 40px); /* Kleinere Reihen */
-    grid-template-columns: 30px repeat(12, 40px) 30px; /* Spalten: 30px (0), 12x40px (Zahlen), 30px (2 to 1) */
+    grid-template-columns: 30px repeat(12, 40px); /* 13 Spalten: 30px (0), 12x40px (Zahlen) */
     gap: 2px; /* Abstand zwischen Zellen */
   }
 
@@ -371,8 +388,23 @@ body {
   }
 
   .to-2-1 {
-    font-size: 12px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
-    padding: 2px; /* Kleinerer Innenabstand */
+    font-size: 10px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
+    padding: 1px 3px; /* Kleinerer Innenabstand */
+  }
+
+  .to-2-1[data-type="2to1-row1"] {
+    top: 2px; /* Abstand vom oberen Rand der Zelle (Reihe 1) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
+  }
+
+  .to-2-1[data-type="2to1-row2"] {
+    top: 42px; /* Abstand vom oberen Rand des Grids (Reihe 2: 40px + 2px gap) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
+  }
+
+  .to-2-1[data-type="2to1-row3"] {
+    top: 82px; /* Abstand vom oberen Rand des Grids (Reihe 3: 80px + 2px gap) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
   }
 
   .casino-chip {
@@ -425,7 +457,7 @@ body {
 
   .roulette-grid {
     grid-template-rows: repeat(5, 30px); /* Reduzierte Höhe der Reihen */
-    grid-template-columns: 12px repeat(12, 20px) 20px; /* Spalten: 12px (0), 12x20px (Zahlen), 20px (2 to 1) */
+    grid-template-columns: 12px repeat(12, 20px); /* 13 Spalten: 12px (0), 12x20px (Zahlen) */
     gap: 1px; /* Reduzierter Abstand zwischen Zellen */
   }
 
@@ -439,7 +471,22 @@ body {
 
   .to-2-1 {
     font-size: 8px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
-    padding: 2px; /* Kleinerer Innenabstand */
+    padding: 1px 2px; /* Kleinerer Innenabstand */
+  }
+
+  .to-2-1[data-type="2to1-row1"] {
+    top: 2px; /* Abstand vom oberen Rand der Zelle (Reihe 1) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
+  }
+
+  .to-2-1[data-type="2to1-row2"] {
+    top: 31px; /* Abstand vom oberen Rand des Grids (Reihe 2: 30px + 1px gap) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
+  }
+
+  .to-2-1[data-type="2to1-row3"] {
+    top: 61px; /* Abstand vom oberen Rand des Grids (Reihe 3: 60px + 1px gap) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
   }
 
   .casino-chip {
@@ -510,7 +557,7 @@ body {
 
   .roulette-grid {
     grid-template-rows: repeat(5, 25px); /* Noch kleinere Reihen */
-    grid-template-columns: 10px repeat(12, 16px) 16px; /* Spalten: 10px (0), 12x16px (Zahlen), 16px (2 to 1) */
+    grid-template-columns: 10px repeat(12, 16px); /* 13 Spalten: 10px (0), 12x16px (Zahlen) */
     gap: 1px; /* Reduzierter Abstand */
   }
 
@@ -524,7 +571,22 @@ body {
 
   .to-2-1 {
     font-size: 6px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
-    padding: 1px; /* Kleinerer Innenabstand */
+    padding: 1px 2px; /* Kleinerer Innenabstand */
+  }
+
+  .to-2-1[data-type="2to1-row1"] {
+    top: 2px; /* Abstand vom oberen Rand der Zelle (Reihe 1) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
+  }
+
+  .to-2-1[data-type="2to1-row2"] {
+    top: 26px; /* Abstand vom oberen Rand des Grids (Reihe 2: 25px + 1px gap) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
+  }
+
+  .to-2-1[data-type="2to1-row3"] {
+    top: 51px; /* Abstand vom oberen Rand des Grids (Reihe 3: 50px + 1px gap) */
+    right: 2px; /* Abstand vom rechten Rand der Zelle */
   }
 
   .casino-chip {
