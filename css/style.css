@@ -146,8 +146,8 @@ body {
 .roulette-grid {
   display: grid; /* Grid-Layout für den Tisch */
   grid-template-rows: repeat(5, 80px); /* 5 Reihen, je 80px hoch */
-  grid-template-columns: 60px repeat(12, 80px) 60px; /* Änderung: "2 to 1"-Spalte auf 60px angepasst */
-  gap: 1px; /* Änderung: Gap auf 1px reduziert, um leeren Raum zu minimieren */
+  grid-template-columns: 60px repeat(12, 80px) 60px; /* Spalten: 60px (0), 12x80px (Zahlen), 60px (2 to 1) */
+  gap: 1px; /* Reduzierter Abstand zwischen Zellen */
   margin: 0 auto; /* Zentriert das Grid */
   position: relative; /* Ermöglicht absolute Positionierung von Kind-Elementen */
   background: url('img/acrylic-texture-green.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
@@ -206,7 +206,7 @@ body {
   background-color: #1a5c38; /* Dunkleres Grün */
   writing-mode: vertical-rl; /* Text vertikal ausrichten */
   text-orientation: mixed; /* Textorientierung für vertikalen Text */
-  font-size: 18px; /* Änderung: Etwas größere Schrift für bessere Lesbarkeit */
+  font-size: 18px; /* Etwas größere Schrift für bessere Lesbarkeit */
   line-height: 1; /* Verhindert zusätzlichen Zeilenabstand */
   text-align: center; /* Text zentriert */
   height: 100%; /* Volle Höhe der Zelle */
@@ -353,12 +353,14 @@ body {
 
   .table-container {
     max-width: 100%; /* Volle Breite */
+    width: 100%; /* Änderung: Sicherstellen, dass der Container die volle Breite nutzt */
   }
 
   .roulette-grid {
     grid-template-rows: repeat(5, 40px); /* Kleinere Reihen */
-    grid-template-columns: 30px repeat(12, 40px) 30px; /* Änderung: "2 to 1"-Spalte auf 30px */
-    gap: 1px; /* Änderung: Gap auf 1px reduziert */
+    grid-template-columns: 1fr repeat(12, 2fr) 1fr; /* Änderung: Proportionale Spaltenbreiten */
+    gap: 1px; /* Reduzierter Abstand */
+    width: 100%; /* Änderung: Volle Breite des Grids */
   }
 
   .cell {
@@ -370,7 +372,7 @@ body {
   }
 
   .to-2-1 {
-    font-size: 12px; /* Änderung: Etwas größere Schrift für Lesbarkeit */
+    font-size: 12px; /* Etwas größere Schrift für Lesbarkeit */
   }
 
   .casino-chip {
@@ -418,13 +420,15 @@ body {
 
   .table-container {
     max-width: 100%; /* Volle Breite */
-    overflow-x: auto; /* Ermöglicht horizontales Scrollen, falls nötig */
+    width: 100%; /* Änderung: Volle Breite des Containers */
+    overflow-x: hidden; /* Änderung: Horizontales Scrollen deaktivieren */
   }
 
   .roulette-grid {
     grid-template-rows: repeat(5, 30px); /* Reduzierte Höhe der Reihen */
-    grid-template-columns: 12px repeat(12, 20px) 20px; /* Änderung: "2 to 1"-Spalte auf 20px */
-    gap: 1px; /* Änderung: Gap auf 1px reduziert */
+    grid-template-columns: 1fr repeat(12, 2fr) 1fr; /* Änderung: Proportionale Spaltenbreiten */
+    gap: 1px; /* Reduzierter Abstand */
+    width: 100%; /* Änderung: Volle Breite des Grids */
   }
 
   .cell {
@@ -502,13 +506,15 @@ body {
 
   .table-container {
     max-width: 100%; /* Volle Breite */
-    overflow-x: auto; /* Ermöglicht horizontales Scrollen, falls nötig */
+    width: 100%; /* Änderung: Volle Breite des Containers */
+    overflow-x: hidden; /* Änderung: Horizontales Scrollen deaktivieren */
   }
 
   .roulette-grid {
     grid-template-rows: repeat(5, 25px); /* Noch kleinere Reihen */
-    grid-template-columns: 10px repeat(12, 16px) 16px; /* Änderung: "2 to 1"-Spalte auf 16px */
-    gap: 1px; /* Änderung: Gap auf 1px reduziert */
+    grid-template-columns: 1fr repeat(12, 2fr) 1fr; /* Änderung: Proportionale Spaltenbreiten */
+    gap: 1px; /* Reduzierter Abstand */
+    width: 100%; /* Änderung: Volle Breite des Grids */
   }
 
   .cell {
