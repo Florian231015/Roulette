@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Grundlegende Metadaten für die Webseite -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roulette Spiel – Klassische Anordnung</title>
-  <!-- Bootstrap CDN -->
+  <!-- Bootstrap CSS für responsive Design und vorgefertigte Stile -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <!-- Google Fonts für handgeschriebene Schrift -->
+  <!-- Google Fonts für handgeschriebene Schriftarten (Amatic SC und Permanent Marker) -->
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- Eigene CSS-Datei für benutzerdefinierte Stile -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <div class="container">
+  <!-- Haupttitel der Seite -->
   <h2 class="main-title text-center">European Roulette</h2>
 
-  <!-- Spielbereich: Rad links, Tisch rechts -->
+  <!-- Spielbereich: Enthält das Roulette-Rad und den Tisch -->
   <div class="row game-container">
-    <!-- Roulette-Rad links -->
+    <!-- Roulette-Rad (linke Seite im Desktop-Modus) -->
     <div class="col-md-4 wheel-container">
+      <!-- Container für das Rad und die Kugel -->
       <div class="wheel-wrapper">
+        <!-- Bild des Roulette-Rads -->
         <img 
-          src="./img/roulette-wheel.png" 
+          src="img/roulette-wheel.png" 
           alt="Roulette Wheel"
           class="wheel-image img-fluid"
           id="roulette-wheel"
         />
+        <!-- Kugel, die auf dem Rad positioniert wird -->
         <div class="ball" id="roulette-ball"></div>
       </div>
+      <!-- Steuerung für das Rad (Drehen-Button) -->
       <div class="wheel-controls text-center">
         <button class="spin-btn btn btn-success" id="spinBtn">Drehen</button>
       </div>
     </div>
 
-    <!-- Tisch rechts -->
+    <!-- Tisch (rechte Seite im Desktop-Modus) -->
     <div class="col-md-8 table-container">
+      <!-- Grid-Layout für den Roulette-Tisch -->
       <div class="roulette-grid">
-        <!-- Zero-Feld (0) – über Rows 1..3 -->
+        <!-- Zero-Feld (0) – erstreckt sich über die ersten drei Reihen -->
         <div 
           class="cell zero bet-field"
           style="grid-row: 1 / span 3; grid-column: 1;"
@@ -45,7 +53,7 @@
           0
         </div>
 
-        <!-- 1) Obere Reihe: (3,6,9,12,15,18,21,24,27,30,33,36) -->
+        <!-- Obere Reihe: Zahlen 3, 6, 9, ..., 36 -->
         <div class="cell black bet-field" style="grid-row: 1; grid-column: 2;" data-number="3">3</div>
         <div class="cell red bet-field" style="grid-row: 1; grid-column: 3;" data-number="6">6</div>
         <div class="cell black bet-field" style="grid-row: 1; grid-column: 4;" data-number="9">9</div>
@@ -58,6 +66,7 @@
         <div class="cell red bet-field" style="grid-row: 1; grid-column: 11;" data-number="30">30</div>
         <div class="cell black bet-field" style="grid-row: 1; grid-column: 12;" data-number="33">33</div>
         <div class="cell red bet-field" style="grid-row: 1; grid-column: 13;" data-number="36">36</div>
+        <!-- "2 to 1"-Feld für die obere Reihe -->
         <div 
           class="cell outside to-2-1 bet-field"
           style="grid-row: 1; grid-column: 14;"
@@ -66,7 +75,7 @@
           2 to 1
         </div>
 
-        <!-- 2) Mittlere Reihe: (2,5,8,11,14,17,20,23,26,29,32,35) -->
+        <!-- Mittlere Reihe: Zahlen 2, 5, 8, ..., 35 -->
         <div class="cell red bet-field" style="grid-row: 2; grid-column: 2;" data-number="2">2</div>
         <div class="cell black bet-field" style="grid-row: 2; grid-column: 3;" data-number="5">5</div>
         <div class="cell red bet-field" style="grid-row: 2; grid-column: 4;" data-number="8">8</div>
@@ -79,6 +88,7 @@
         <div class="cell black bet-field" style="grid-row: 2; grid-column: 11;" data-number="29">29</div>
         <div class="cell red bet-field" style="grid-row: 2; grid-column: 12;" data-number="32">32</div>
         <div class="cell black bet-field" style="grid-row: 2; grid-column: 13;" data-number="35">35</div>
+        <!-- "2 to 1"-Feld für die mittlere Reihe -->
         <div 
           class="cell outside to-2-1 bet-field"
           style="grid-row: 2; grid-column: 14;"
@@ -87,7 +97,7 @@
           2 to 1
         </div>
 
-        <!-- 3) Untere Reihe: (1,4,7,10,13,16,19,22,25,28,31,34) -->
+        <!-- Untere Reihe: Zahlen 1, 4, 7, ..., 34 -->
         <div class="cell black bet-field" style="grid-row: 3; grid-column: 2;" data-number="1">1</div>
         <div class="cell red bet-field" style="grid-row: 3; grid-column: 3;" data-number="4">4</div>
         <div class="cell black bet-field" style="grid-row: 3; grid-column: 4;" data-number="7">7</div>
@@ -100,6 +110,7 @@
         <div class="cell red bet-field" style="grid-row: 3; grid-column: 11;" data-number="28">28</div>
         <div class="cell black bet-field" style="grid-row: 3; grid-column: 12;" data-number="31">31</div>
         <div class="cell red bet-field" style="grid-row: 3; grid-column: 13;" data-number="34">34</div>
+        <!-- "2 to 1"-Feld für die untere Reihe -->
         <div 
           class="cell outside to-2-1 bet-field"
           style="grid-row: 3; grid-column: 14;"
@@ -108,12 +119,12 @@
           2 to 1
         </div>
 
-        <!-- 4) 1st12, 2nd12, 3rd12 -->
+        <!-- Dutzend-Felder: 1st 12, 2nd 12, 3rd 12 -->
         <div class="cell outside bet-field" style="grid-row: 4; grid-column: 2 / span 4;" data-type="1st12">1st 12</div>
         <div class="cell outside bet-field" style="grid-row: 4; grid-column: 6 / span 4;" data-type="2nd12">2nd 12</div>
         <div class="cell outside bet-field" style="grid-row: 4; grid-column: 10 / span 4;" data-type="3rd12">3rd 12</div>
 
-        <!-- 5) Outside Bets: 1-18, EVEN, RED, BLACK, ODD, 19-36 -->
+        <!-- Outside Bets: 1-18, EVEN, RED, BLACK, ODD, 19-36 -->
         <div class="cell outside bet-field" style="grid-row: 5; grid-column: 2 / span 2;" data-type="1-18">1 to 18</div>
         <div class="cell outside bet-field" style="grid-row: 5; grid-column: 4 / span 2;" data-type="even">EVEN</div>
         <div class="cell outside red bet-field" style="grid-row: 5; grid-column: 6 / span 2;" data-type="red">RED</div>
@@ -122,14 +133,15 @@
         <div class="cell outside bet-field" style="grid-row: 5; grid-column: 12 / span 2;" data-type="19-36">19 to 36</div>
       </div>
 
-      <!-- Ergebnisanzeige -->
+      <!-- Container für die Ergebnisanzeige (z. B. Gewinn/Verlust) -->
       <div id="result" class="result-display d-none"></div>
     </div>
   </div>
 
-  <!-- Chips-Bereich -->
+  <!-- Chips-Bereich: Auswahl der Einsatz-Chips -->
   <div class="chips-section text-center">
     <h4>Wähle deine Chips:</h4>
+    <!-- Container für die Chips -->
     <div class="chips-container d-flex justify-content-center">
       <div class="casino-chip chip-5" data-value="5">5</div>
       <div class="casino-chip chip-10" data-value="10">10</div>
@@ -138,7 +150,7 @@
     </div>
   </div>
 
-  <!-- Balance-Anzeige (jetzt nach den Chips) -->
+  <!-- Balance-Anzeige: Zeigt die aktuelle Balance und den Button zum Setzen der Balance -->
   <div class="balance-display">
     <h3>Balance: <span id="balance">1000</span> Chips</h3>
     <!-- Button zum Öffnen des Modals -->
@@ -147,7 +159,7 @@
     </button>
   </div>
 
-  <!-- Modal für Balance-Einstellung -->
+  <!-- Modal für die Balance-Einstellung -->
   <div class="modal fade" id="setBalanceModal" tabindex="-1" role="dialog" aria-labelledby="setBalanceModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -188,7 +200,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Eigene JavaScript-Datei für die Spiellogik -->
 <script src="js/main.js"></script>
+<!-- Cloudflare-Skripte für Sicherheits- und Performance-Optimierung -->
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9266e7ddfd60bd3e',t:'MTc0Mjk5NDgxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'926e33f2ffc853f0',t:'MTc0MzA3MTMyNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
