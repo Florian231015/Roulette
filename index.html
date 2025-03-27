@@ -95,21 +95,28 @@
         <div class="cell black bet-field" style="grid-row: 3; grid-column: 12;" data-number="31">31</div>
         <div class="cell red bet-field" style="grid-row: 3; grid-column: 13;" data-number="34">34</div>
 
-        <!-- "2 to 1"-Felder, die später mit CSS positioniert werden -->
+        <!-- "2 to 1"-Feld für die obere Reihe -->
         <div 
-          class="to-2-1 bet-field"
+          class="cell outside to-2-1 bet-field"
+          style="grid-row: 1; grid-column: 14;"
           data-type="2to1-row1"
         >
           2 to 1
         </div>
+
+        <!-- "2 to 1"-Feld für die mittlere Reihe -->
         <div 
-          class="to-2-1 bet-field"
+          class="cell outside to-2-1 bet-field"
+          style="grid-row: 2; grid-column: 14;"
           data-type="2to1-row2"
         >
           2 to 1
         </div>
+
+        <!-- "2 to 1"-Feld für die untere Reihe -->
         <div 
-          class="to-2-1 bet-field"
+          class="cell outside to-2-1 bet-field"
+          style="grid-row: 3; grid-column: 14;"
           data-type="2to1-row3"
         >
           2 to 1
@@ -118,7 +125,7 @@
         <!-- Dutzend-Felder: 1st 12, 2nd 12, 3rd 12 -->
         <div class="cell outside bet-field" style="grid-row: 4; grid-column: 2 / span 4;" data-type="1st12">1st 12</div>
         <div class="cell outside bet-field" style="grid-row: 4; grid-column: 6 / span 4;" data-type="2nd12">2nd 12</div>
-        <div class="cell outside bet-field" style="grid-row: 4; grid-column: 10 / span 3;" data-type="3rd12">3rd 12</div>
+        <div class="cell outside bet-field" style="grid-row: 4; grid-column: 10 / span 4;" data-type="3rd12">3rd 12</div>
 
         <!-- Outside Bets: 1-18, EVEN, RED, BLACK, ODD, 19-36 -->
         <div class="cell outside bet-field" style="grid-row: 5; grid-column: 2 / span 2;" data-type="1-18">1 to 18</div>
