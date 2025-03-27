@@ -206,13 +206,11 @@ body {
   background-color: #1a5c38; /* Dunkleres Grün */
   writing-mode: vertical-rl; /* Text vertikal ausrichten */
   text-orientation: mixed; /* Textorientierung für vertikalen Text */
-  padding: 5px; /* Innenabstand */
+  font-size: 16px; /* Kleinere Schriftgröße für schmalere Spalte */
+  line-height: 1; /* Verhindert zusätzlichen Zeilenabstand */
+  text-align: center; /* Text zentriert */
   height: 100%; /* Volle Höhe der Zelle */
   width: 100%; /* Volle Breite der Zelle */
-  display: flex; /* Flexbox für Zentrierung */
-  align-items: center; /* Vertikale Zentrierung */
-  justify-content: center; /* Horizontale Zentrierung */
-  font-size: 16px; /* Kleinere Schriftgröße für schmalere Spalte */
 }
 
 /* Markierung bei aktiven Wetten */
@@ -373,7 +371,6 @@ body {
 
   .to-2-1 {
     font-size: 10px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
-    padding: 2px; /* Kleinerer Innenabstand */
   }
 
   .casino-chip {
@@ -440,7 +437,6 @@ body {
 
   .to-2-1 {
     font-size: 8px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
-    padding: 1px; /* Kleinerer Innenabstand */
   }
 
   .casino-chip {
@@ -525,7 +521,6 @@ body {
 
   .to-2-1 {
     font-size: 6px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
-    padding: 1px; /* Kleinerer Innenabstand */
   }
 
   .casino-chip {
