@@ -1,374 +1,379 @@
 /* Seitenlayout */
 body {
-  margin: 0; /* Entfernt Standard-Ränder */
-  padding: 10px; /* Fügt Innenabstand hinzu */
-  background: url('img/acrylic-texture-green.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
-  background-color: #1a5c38; /* Fallback-Farbe (dunkles Grün) */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  color: #fff; /* Textfarbe weiß */
+  margin: 0;
+  padding: 10px;
+  background: url('img/acrylic-texture-green.jpg') repeat; /* Ersetze mit einer echten Textur */
+  background-color: #1a5c38; /* Dunkleres Grün als Fallback */
+  font-family: 'Amatic SC', cursive;
+  color: #fff;
 }
 
 .container {
-  max-width: 100%; /* Maximale Breite des Containers */
-  margin: 0 auto; /* Zentriert den Container */
-  position: relative; /* Ermöglicht absolute Positionierung von Kind-Elementen */
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .main-title {
-  margin-bottom: 20px; /* Abstand nach unten */
-  font-size: 48px; /* Schriftgröße des Titels */
-  font-family: 'Permanent Marker', cursive; /* Andere handgeschriebene Schriftart */
-  color: #ffd700; /* Goldfarbe für den Titel */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Textschatten für Tiefe */
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-family: 'Permanent Marker', cursive;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Balance-Anzeige (unten rechts im Desktop-Modus) */
 .balance-display {
-  position: absolute; /* Absolute Positionierung */
-  bottom: 20px; /* Abstand vom unteren Rand */
-  right: 20px; /* Abstand vom rechten Rand */
-  text-align: right; /* Text rechtsbündig */
+  position: absolute;
+  bottom: 20px; /* Unten rechts im Desktop-Modus */
+  right: 20px;
+  text-align: right;
   z-index: 10; /* Sicherstellen, dass die Balance über dem Tisch liegt */
 }
 
 .balance-display h3 {
-  font-size: 32px; /* Schriftgröße der Balance-Anzeige */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  color: #fff; /* Textfarbe weiß */
-  margin-bottom: 10px; /* Abstand nach unten */
+  font-size: 32px;
+  font-family: 'Amatic SC', cursive;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .balance-display span {
-  color: #ffd700; /* Goldfarbe für die Balance-Zahl */
-  font-weight: bold; /* Fettgedruckt */
+  color: #ffd700; /* Goldfarben für die Balance */
+  font-weight: bold;
 }
 
 /* Set Balance Button */
 .btn-primary {
-  background: url('img/acrylic-texture-blue.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
-  background-color: #1e90ff; /* Fallback-Farbe (Blau) */
-  border: 2px solid #fff; /* Weißer Rand */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  font-size: 20px; /* Schriftgröße */
-  color: #fff; /* Textfarbe weiß */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Textschatten */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
-  transition: transform 0.2s; /* Animation für Hover-Effekt */
+  background: url('img/acrylic-texture-blue.jpg') repeat; /* Ersetze mit einer echten Textur */
+  background-color: #1e90ff; /* Fallback */
+  border: 2px solid #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
 }
 
 .btn-primary:hover {
-  transform: scale(1.05); /* Vergrößert den Button bei Hover */
+  transform: scale(1.05);
 }
 
 /* Spielbereich: Rad links, Tisch rechts */
 .game-container {
-  margin-bottom: 20px; /* Abstand nach unten */
-  display: flex; /* Flexbox für Layout */
-  align-items: center; /* Vertikale Zentrierung */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 /* Roulette-Rad */
 .wheel-container {
-  display: flex; /* Flexbox für Layout */
-  flex-direction: column; /* Elemente untereinander anordnen */
-  align-items: center; /* Horizontale Zentrierung */
-  flex: 1; /* Nimmt verfügbaren Platz ein */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 
 .wheel-wrapper {
-  position: relative; /* Ermöglicht absolute Positionierung der Kugel */
-  width: 100%; /* Volle Breite */
-  max-width: 500px; /* Maximale Breite des Rads */
-  aspect-ratio: 1 / 1; /* Quadratisches Seitenverhältnis */
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
 }
 
 .wheel-image {
-  width: 100%; /* Volle Breite */
-  height: 100%; /* Volle Höhe */
-  transition: transform 8s cubic-bezier(0.25, 0, 0, 1); /* Animation für Drehen */
-  filter: brightness(1.1) contrast(1.2); /* Helligkeit und Kontrast anpassen */
-  position: relative; /* Ermöglicht Pseudo-Elemente */
+  width: 100%;
+  height: 100%;
+  transition: transform 8s cubic-bezier(0.25, 0, 0, 1);
+  filter: brightness(1.1) contrast(1.2);
+  position: relative;
 }
 
 .wheel-image::after {
-  content: ''; /* Pseudo-Element für Textur-Overlay */
-  position: absolute; /* Absolute Positionierung */
-  top: 0; /* Oben ausrichten */
-  left: 0; /* Links ausrichten */
-  width: 100%; /* Volle Breite */
-  height: 100%; /* Volle Höhe */
-  background: url('img/acrylic-brushstrokes.png') repeat; /* Textur-Overlay (Platzhalter) */
-  opacity: 0.2; /* Transparenz */
-  pointer-events: none; /* Keine Interaktion mit dem Overlay */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/acrylic-brushstrokes.png') repeat; /* Ersetze mit einer echten Textur */
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .ball {
-  position: absolute; /* Absolute Positionierung auf dem Rad */
-  width: 5%; /* Breite der Kugel (relativ zum Rad) */
-  height: 5%; /* Höhe der Kugel (relativ zum Rad) */
-  background-color: #fff; /* Weiße Farbe */
-  border-radius: 50%; /* Runde Form */
-  top: 5%; /* Positionierung oben */
-  left: 50%; /* Horizontale Zentrierung */
-  transform: translateX(-50%); /* Korrektur der horizontalen Position */
-  z-index: 2; /* Über dem Rad */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .wheel-controls {
-  margin-top: 20px; /* Abstand nach oben */
+  margin-top: 20px;
 }
 
 .spin-btn {
-  background: url('img/acrylic-texture-green.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
-  background-color: #28a745; /* Fallback-Farbe (Grün) */
-  border: 2px solid #fff; /* Weißer Rand */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  font-size: 24px; /* Schriftgröße */
-  color: #fff; /* Textfarbe weiß */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Textschatten */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
-  transition: transform 0.2s; /* Animation für Hover-Effekt */
+  background: url('img/acrylic-texture-green.jpg') repeat; /* Ersetze mit einer echten Textur */
+  background-color: #28a745; /* Fallback */
+  border: 2px solid #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
 }
 
 .spin-btn:hover {
-  transform: scale(1.05); /* Vergrößert den Button bei Hover */
+  transform: scale(1.05);
 }
 
 /* Tisch: 5x14 Grid */
 .table-container {
-  max-width: 1100px; /* Maximale Breite des Tisches */
-  flex: 2; /* Nimmt mehr Platz ein als das Rad */
-  position: relative; /* Ermöglicht absolute Positionierung von Kind-Elementen */
+  max-width: 1100px;
+  flex: 2;
+  position: relative;
   z-index: 1; /* Sicherstellen, dass der Tisch unter der Balance liegt */
 }
 
 .roulette-grid {
-  display: grid; /* Grid-Layout für den Tisch */
-  grid-template-rows: repeat(5, 80px); /* 5 Reihen, je 80px hoch */
-  grid-template-columns: 60px repeat(12, 80px) 80px; /* Spalten: 60px (0), 12x80px (Zahlen), 80px (2 to 1) */
-  gap: 2px; /* Abstand zwischen Zellen */
-  margin: 0 auto; /* Zentriert das Grid */
-  position: relative; /* Ermöglicht absolute Positionierung von Kind-Elementen */
-  background: url('img/acrylic-texture-green.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
-  background-color: #2e8b57; /* Fallback-Farbe (Grün) */
-  border: 3px solid #fff; /* Weißer Rand */
-  border-radius: 10px; /* Abgerundete Ecken */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
+  display: grid;
+  grid-template-rows: repeat(5, 80px);
+  grid-template-columns: 60px repeat(12, 80px) 80px; /* Letzte Spalte (2 to 1) auf 80px angepasst */
+  gap: 2px;
+  margin: 0 auto;
+  position: relative;
+  background: url('img/acrylic-texture-green.jpg') repeat; /* Ersetze mit einer echten Textur */
+  background-color: #2e8b57; /* Fallback */
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; /* Sicherstellen, dass der Border in die Breite einbezogen wird */
+  max-width: 100%; /* Verhindert, dass der Tisch aus dem Viewport herausragt */
 }
 
 /* Jede Zelle */
 .cell {
-  border: 1px solid #fff; /* Weißer Rand */
-  box-sizing: border-box; /* Rand in die Größe einbeziehen */
-  display: flex; /* Flexbox für Zentrierung */
-  align-items: center; /* Vertikale Zentrierung */
-  justify-content: center; /* Horizontale Zentrierung */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  font-weight: bold; /* Fettgedruckt */
-  color: #fff; /* Textfarbe weiß */
-  user-select: none; /* Textauswahl verhindern */
-  cursor: pointer; /* Zeiger-Cursor bei Hover */
-  font-size: 24px; /* Schriftgröße */
-  position: relative; /* Ermöglicht absolute Positionierung von Pseudo-Elementen */
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Innerer Schatten für Tiefe */
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Null-Feld (grün, 3 Rows hoch) */
 .zero {
-  background: url('img/acrylic-texture-green.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
+  background: url('img/acrylic-texture-green.jpg') repeat; /* Ersetze mit einer echten Textur */
   background-color: #006400; /* Dunkleres Grün */
 }
 
 /* Rot/Schwarz */
 .red {
-  background: url('img/acrylic-texture-red.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
+  background: url('img/acrylic-texture-red.jpg') repeat; /* Ersetze mit einer echten Textur */
   background-color: #ff4040; /* Lebendigeres Rot */
 }
 
 .black {
-  background: url('img/acrylic-texture-black.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
+  background: url('img/acrylic-texture-black.jpg') repeat; /* Ersetze mit einer echten Textur */
   background-color: #1c2526; /* Dunkleres Schwarz */
 }
 
 /* Outside-Felder */
 .outside {
-  background: url('img/acrylic-texture-green.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
-  background-color: #2e8b57; /* Grün */
-  font-size: 20px; /* Kleinere Schriftgröße */
+  background: url('img/acrylic-texture-green.jpg') repeat; /* Ersetze mit einer echten Textur */
+  background-color: #2e8b57;
+  font-size: 20px;
 }
 
 /* Spezifische Klasse für "2 to 1"-Felder */
 .to-2-1 {
-  background: url('img/acrylic-texture-dark-green.jpg') repeat; /* Dunklere Textur (Platzhalter) */
-  background-color: #1a5c38; /* Dunkleres Grün */
+  background: url('img/acrylic-texture-dark-green.jpg') repeat; /* Dunklere Textur für "2 to 1" */
+  background-color: #1a5c38; /* Dunkleres Grün als Fallback */
 }
 
 /* Markierung bei aktiven Wetten */
 .active-bet {
-  position: relative; /* Ermöglicht absolute Positionierung des Pseudo-Elements */
-  border: 2px solid #ffd700; /* Goldfarbener Rand */
+  position: relative;
+  border: 2px solid #ffd700;
 }
 
 .active-bet::after {
-  content: ""; /* Pseudo-Element für visuelles Feedback */
-  position: absolute; /* Absolute Positionierung */
-  top: 50%; /* Vertikale Zentrierung */
-  left: 50%; /* Horizontale Zentrierung */
-  transform: translate(-50%, -50%); /* Korrektur der Position */
-  width: 40px; /* Breite des Kreises */
-  height: 40px; /* Höhe des Kreises */
-  border-radius: 50%; /* Runde Form */
-  background-color: rgba(255, 255, 255, 0.3); /* Halbtransparenter weißer Kreis */
-  z-index: 1; /* Über der Zelle */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
 }
 
 /* Ergebnisanzeige */
 .result-display {
-  margin-top: 10px; /* Abstand nach oben */
-  padding: 10px; /* Innenabstand */
-  border-radius: 10px; /* Abgerundete Ecken */
-  text-align: center; /* Text zentriert */
-  font-size: 20px; /* Schriftgröße */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  border: 2px solid #fff; /* Weißer Rand */
-  background: url('img/acrylic-texture-white.jpg') repeat; /* Hintergrundtextur (Platzhalter) */
-  background-color: rgba(255, 255, 0.8); /* Fallback-Farbe (Weiß) */
-  color: #000; /* Textfarbe schwarz */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive;
+  border: 2px solid #fff;
+  background: url('img/acrylic-texture-white.jpg') repeat; /* Ersetze mit einer echten Textur */
+  background-color: rgba(255, 255, 0.8);
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .result-display.info {
-  background-color: rgba(23, 162, 184, 0.8); /* Blaue Farbe für Info-Meldungen */
-  color: #fff; /* Textfarbe weiß */
+  background-color: rgba(23, 162, 184, 0.8);
+  color: #fff;
 }
 .result-display.success {
-  background-color: rgba(40, 167, 69, 0.8); /* Grüne Farbe für Erfolgsmeldungen */
-  color: #fff; /* Textfarbe weiß */
+  background-color: rgba(40, 167, 69, 0.8);
+  color: #fff;
 }
 .result-display.danger {
-  background-color: rgba(220, 53, 69, 0.8); /* Rote Farbe für Fehlermeldungen */
-  color: #fff; /* Textfarbe weiß */
+  background-color: rgba(220, 53, 69, 0.8);
+  color: #fff;
 }
 .d-none {
-  display: none; /* Versteckt das Element */
+  display: none;
 }
 
 /* Chips-Bereich */
 .chips-section {
-  margin-top: 20px; /* Abstand nach oben */
-  margin-bottom: 80px; /* Abstand nach unten */
+  margin-top: 20px;
+  margin-bottom: 80px;
   text-align: center; /* Zentriert die Chips und die Balance */
 }
 
 .chips-section h4 {
-  margin-bottom: 10px; /* Abstand nach unten */
-  font-size: 32px; /* Schriftgröße */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  color: #ffd700; /* Goldfarbe */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Textschatten */
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-family: 'Amatic SC', cursive;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .chips-container {
-  gap: 20px; /* Abstand zwischen Chips */
-  flex-wrap: wrap; /* Chips umbrechen, wenn kein Platz */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .casino-chip {
-  width: 80px; /* Breite des Chips */
-  height: 80px; /* Höhe des Chips */
-  border-radius: 50%; /* Runde Form */
-  position: relative; /* Ermöglicht absolute Positionierung des Pseudo-Elements */
-  cursor: pointer; /* Zeiger-Cursor bei Hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Schatten für Tiefe */
-  display: flex; /* Flexbox für Zentrierung */
-  align-items: center; /* Vertikale Zentrierung */
-  justify-content: center; /* Horizontale Zentrierung */
-  color: #fff; /* Textfarbe weiß */
-  font-family: 'Amatic SC', cursive; /* Handgeschriebene Schriftart */
-  font-weight: bold; /* Fettgedruckt */
-  font-size: 24px; /* Schriftgröße */
-  transition: transform 0.2s; /* Animation für Hover-Effekt */
-  background: url('img/acrylic-brushstrokes.png') repeat; /* Hintergrundtextur (Platzhalter) */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 24px;
+  transition: transform 0.2s;
+  background: url('img/acrylic-brushstrokes.png') repeat; /* Ersetze mit einer echten Textur */
 }
 
 .casino-chip::before {
-  content: ""; /* Pseudo-Element für inneren Rand */
-  position: absolute; /* Absolute Positionierung */
-  top: 10px; /* Abstand von oben */
-  left: 10px; /* Abstand von links */
-  right: 10px; /* Abstand von rechts */
-  bottom: 10px; /* Abstand von unten */
-  border: 2px solid #fff; /* Weißer Rand */
-  border-radius: 50%; /* Runde Form */
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
 }
 
 /* Verschiedene Chip-Farben */
 .chip-5 {
-  background-color: #ff4040; /* Rot für 5-Chip */
+  background-color: #ff4040;
 }
 .chip-10 {
-  background-color: #1e90ff; /* Blau für 10-Chip */
+  background-color: #1e90ff;
 }
 .chip-25 {
-  background-color: #32cd32; /* Grün für 25-Chip */
+  background-color: #32cd32;
 }
 .chip-100 {
-  background-color: #1c2526; /* Schwarz für 100-Chip */
+  background-color: #1c2526;
 }
 
 /* Hover-Effekt, Auswahl */
 .casino-chip:hover {
-  transform: scale(1.1); /* Vergrößert den Chip bei Hover */
+  transform: scale(1.1);
 }
 .casino-chip.selected {
-  transform: scale(1.1); /* Vergrößert den ausgewählten Chip */
-  box-shadow: 0 0 15px rgba(255, 255, 0, 0.7); /* Goldfarbener Glanz */
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
 }
 
-/* Responsives Design für Tablets (max-width: 768px) */
+/* Responsives Design */
+
+/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
   .game-container {
-    flex-direction: column; /* Rad und Tisch untereinander anordnen */
+    flex-direction: column;
   }
 
   .wheel-container {
-    margin-bottom: 20px; /* Abstand nach unten */
+    margin-bottom: 20px;
   }
 
   .wheel-wrapper {
-    max-width: 350px; /* Kleinere maximale Breite des Rads */
+    max-width: 350px;
   }
 
   .table-container {
-    max-width: 100%; /* Volle Breite */
+    max-width: 100%;
   }
 
   .roulette-grid {
-    grid-template-rows: repeat(5, 40px); /* Kleinere Reihen */
-    grid-template-columns: 30px repeat(12, 40px) 40px; /* Kleinere Spalten */
+    grid-template-rows: repeat(5, 40px);
+    grid-template-columns: 30px repeat(12, 40px) 40px; /* Gesamtbreite: 30 + 12*40 + 40 + 13*2 = 576px */
+    gap: 2px;
   }
 
   .cell {
-    font-size: 14px; /* Kleinere Schriftgröße */
+    font-size: 14px;
   }
 
   .outside {
-    font-size: 12px; /* Kleinere Schriftgröße für Outside-Felder */
+    font-size: 12px;
   }
 
   .to-2-1 {
-    font-size: 12px; /* Kleinere Schriftgröße für "2 to 1"-Felder */
+    font-size: 12px;
   }
 
   .casino-chip {
-    width: 50px; /* Kleinere Chips */
-    height: 50px; /* Kleinere Chips */
-    font-size: 16px; /* Kleinere Schriftgröße */
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
   }
 
   .casino-chip::before {
-    top: 6px; /* Anpassung des inneren Rands */
+    top: 6px;
     left: 6px;
     right: 6px;
     bottom: 6px;
@@ -382,11 +387,11 @@ body {
   }
 
   .balance-display h3 {
-    font-size: 24px; /* Kleinere Schriftgröße */
+    font-size: 24px;
   }
 
   .result-display {
-    font-size: 16px; /* Kleinere Schriftgröße */
+    font-size: 16px;
   }
 
   .chips-section {
@@ -394,53 +399,54 @@ body {
   }
 }
 
-/* Responsives Design für Handys (max-width: 576px) */
+/* Handys (max-width: 576px) */
 @media (max-width: 576px) {
   .main-title {
-    font-size: 32px; /* Kleinere Schriftgröße */
+    font-size: 32px;
   }
 
   .wheel-wrapper {
-    max-width: 250px; /* Noch kleinere maximale Breite des Rads */
+    max-width: 250px;
   }
 
   .table-container {
-    max-width: 100%; /* Volle Breite */
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    max-width: 100%;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen, falls nötig */
   }
 
   .roulette-grid {
-    grid-template-rows: repeat(5, 25px); /* Noch kleinere Reihen */
-    grid-template-columns: 15px repeat(12, 25px) 25px; /* Noch kleinere Spalten */
+    grid-template-rows: repeat(5, 30px); /* Reduzierte Höhe der Reihen */
+    grid-template-columns: 12px repeat(12, 20px) 20px; /* Reduzierte Breite: 12 + 12*20 + 20 + 13*1 = 282px */
+    gap: 1px; /* Reduzierter Abstand zwischen Zellen */
   }
 
   .cell {
-    font-size: 8px; /* Noch kleinere Schriftgröße */
+    font-size: 10px; /* Etwas größere Schrift für bessere Lesbarkeit */
   }
 
   .outside {
-    font-size: 6px; /* Noch kleinere Schriftgröße für Outside-Felder */
+    font-size: 8px; /* Etwas größere Schrift für bessere Lesbarkeit */
   }
 
   .to-2-1 {
-    font-size: 6px; /* Noch kleinere Schriftgröße für "2 to 1"-Felder */
+    font-size: 8px; /* Etwas größere Schrift für bessere Lesbarkeit */
   }
 
   .casino-chip {
-    width: 40px; /* Noch kleinere Chips */
-    height: 40px; /* Noch kleinere Chips */
-    font-size: 12px; /* Noch kleinere Schriftgröße */
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
   }
 
   .casino-chip::before {
-    top: 5px; /* Anpassung des inneren Rands */
+    top: 5px;
     left: 5px;
     right: 5px;
     bottom: 5px;
   }
 
   .chips-container {
-    gap: 10px; /* Kleinerer Abstand zwischen Chips */
+    gap: 10px;
   }
 
   /* Balance-Anzeige unter den Chips */
@@ -451,16 +457,16 @@ body {
   }
 
   .balance-display h3 {
-    font-size: 18px; /* Noch kleinere Schriftgröße */
+    font-size: 18px;
   }
 
   .btn-primary {
-    font-size: 14px; /* Kleinere Schriftgröße */
-    padding: 5px 10px; /* Kleinerer Innenabstand */
+    font-size: 14px;
+    padding: 5px 10px;
   }
 
   .result-display {
-    font-size: 12px; /* Noch kleinere Schriftgröße */
+    font-size: 12px;
   }
 
   .chips-section {
@@ -468,11 +474,84 @@ body {
   }
 
   .chips-section h4 {
-    font-size: 24px; /* Kleinere Schriftgröße */
+    font-size: 24px;
   }
 
   .spin-btn {
-    font-size: 18px; /* Kleinere Schriftgröße */
-    padding: 8px 16px; /* Kleinerer Innenabstand */
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+}
+
+/* Sehr kleine Bildschirme (max-width: 400px, z. B. iPhone SE mit 320px Breite) */
+@media (max-width: 400px) {
+  .main-title {
+    font-size: 28px; /* Noch kleinere Schriftgröße */
+  }
+
+  .wheel-wrapper {
+    max-width: 200px; /* Noch kleinere maximale Breite des Rads */
+  }
+
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen, falls nötig */
+  }
+
+  .roulette-grid {
+    grid-template-rows: repeat(5, 25px); /* Noch kleinere Reihen */
+    grid-template-columns: 10px repeat(12, 16px) 16px; /* Reduzierte Breite: 10 + 12*16 + 16 + 13*1 = 231px */
+    gap: 1px; /* Reduzierter Abstand */
+  }
+
+  .cell {
+    font-size: 8px; /* Kleinere Schriftgröße, aber noch lesbar */
+  }
+
+  .outside {
+    font-size: 6px; /* Kleinere Schriftgröße, aber noch lesbar */
+  }
+
+  .to-2-1 {
+    font-size: 6px; /* Kleinere Schriftgröße, aber noch lesbar */
+  }
+
+  .casino-chip {
+    width: 35px; /* Noch kleinere Chips */
+    height: 35px;
+    font-size: 10px;
+  }
+
+  .casino-chip::before {
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+  }
+
+  .chips-container {
+    gap: 8px; /* Kleinerer Abstand zwischen Chips */
+  }
+
+  .balance-display h3 {
+    font-size: 16px; /* Noch kleinere Schriftgröße */
+  }
+
+  .btn-primary {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .result-display {
+    font-size: 10px; /* Noch kleinere Schriftgröße */
+  }
+
+  .chips-section h4 {
+    font-size: 20px; /* Kleinere Schriftgröße */
+  }
+
+  .spin-btn {
+    font-size: 16px;
+    padding: 6px 12px;
   }
 }
